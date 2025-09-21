@@ -1,0 +1,55 @@
+# =========================
+# Unity Gitignore (Unity 6+)
+# =========================
+
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+# [Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+SysInfo/
+
+# Build results
+*.apk
+*.aab
+*.app
+*.exe
+*.ipa
+*.dll
+*.so
+*.dylib
+
+# Crash & debug
+*.stackdump
+*.log
+*.pidb
+*.pdb
+*.mdb
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj
+*.sln
+*.swp
+*.tmp
+*.booproj
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Unity auto-generated packages
+*.unitypackage
+
+# Rider / JetBrains
+*.iml
+.gradle/
+out/
