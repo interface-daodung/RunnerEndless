@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float speedSide = 10f;
-    [SerializeField] private float jumpForce = 200f;
+    [SerializeField] private float speed = 15f;
+    [SerializeField] private float speedSide = 20f;
+    [SerializeField] private float jumpForce = 250f;
     private float moveInput;
     private Rigidbody rb;
     private Animator animator;
@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (isDie) return;
+        float accelerate = 10 + Mathf.Floor(RoadSpawner.instance.roadCount / 10f);
+        if (speed < accelerate) speed = accelerate;
         moveInput = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -59,6 +61,7 @@ public class Player : MonoBehaviour
     {
         isDie = true;
         animator.SetBool("isDie", true);
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         GameOver();
     }
 

@@ -1002,6 +1002,9 @@ GameObject:
   - component: {fileID: 473305897}
   - component: {fileID: 473305896}
   - component: {fileID: 473305898}
+  - component: {fileID: 473305901}
+  - component: {fileID: 473305900}
+  - component: {fileID: 473305899}
   m_Layer: 0
   m_Name: RoadSpawner
   m_TagString: Untagged
@@ -1024,6 +1027,9 @@ MonoBehaviour:
   roadCount: 0
   nextSpawnPoint: {x: -15, y: 0, z: 0}
   roadPool: {fileID: 0}
+  coinPool: {fileID: 0}
+  pylonPool: {fileID: 0}
+  fencePool: {fileID: 0}
 --- !u!4 &473305897
 Transform:
   m_ObjectHideFlags: 0
@@ -1051,7 +1057,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42e3f77ff74d4043b803b1466466400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
   roadPrefab: {fileID: 1765573302163687267, guid: a623259fa184eb4479899272a8781bce, type: 3}
+--- !u!114 &473305899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473305895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898263a4f8216e40b70ac2642d8c74c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  fencePrefab: {fileID: 5267609511558434851, guid: b9682fcd88bb9c74db7565c2040bb16d, type: 3}
+--- !u!114 &473305900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473305895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06c4fa64d69d9e43937ed404ed7e4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  pylonPrefab: {fileID: 5462898508030381581, guid: 0ff1ce4c14ddea84cab39b995f6a4cd1, type: 3}
+--- !u!114 &473305901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473305895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc75fbd0958069f4486201d9791d5d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  coinPrefab: {fileID: 1698358912373073119, guid: bfb8ec87835eb1a4bad6fda775d1c04e, type: 3}
 --- !u!1 &513831346
 GameObject:
   m_ObjectHideFlags: 0
@@ -14571,7 +14620,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: c276af3be06e3b344b151f6017b88a50, type: 3}
   m_Controller: {fileID: 9100000, guid: f512508ad758c8a48885c064508f8734, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 2
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -14620,7 +14669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf9331d7e72a294e9b4fc75df5aaf4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 18
+  speed: 15
   speedSide: 20
   jumpForce: 250
 --- !u!136 &6414911059072166954
@@ -19105,12 +19154,12 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 330585546}
+  - {fileID: 513831349}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 915622467}
   - {fileID: 1732070037}
-  - {fileID: 473305897}
   - {fileID: 1713612054}
-  - {fileID: 513831349}
   - {fileID: 1000846635}
   - {fileID: 6414911059072166950}
+  - {fileID: 473305897}

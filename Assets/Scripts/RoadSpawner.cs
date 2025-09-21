@@ -3,9 +3,12 @@ using UnityEngine;
 public class RoadSpawner : MonoBehaviour
 {
     public static RoadSpawner instance { get; private set; }//instance
-    public int roadCount;
+    public int roadCount = 0;
     public Vector3 nextSpawnPoint;
     public RoadPool roadPool;
+    public CoinPool coinPool;
+    public PylonPool pylonPool;
+    public FencePool fencePool;
     void Awake()
     {
         // if (instance != null && instance != this)
@@ -21,8 +24,10 @@ public class RoadSpawner : MonoBehaviour
     }
     void Start()
     {
-        roadCount = 0;
+        coinPool = FindAnyObjectByType<CoinPool>();
         roadPool = FindAnyObjectByType<RoadPool>();
+        pylonPool = FindAnyObjectByType<PylonPool>();
+        fencePool = FindAnyObjectByType<FencePool>();
         for (int i = 0; i < 15; i++)
         {
             SpawnRoad();
@@ -31,7 +36,7 @@ public class RoadSpawner : MonoBehaviour
     public void SpawnRoad()
     {
         roadCount++;
-        GameObject temp = roadPool.GetRoad();
+        GameObject temp = roadPool.Get();
         temp.GetComponent<SpawnObstacle>().Spawn();
         temp.transform.position = nextSpawnPoint;
         nextSpawnPoint = temp.transform.Find("nextPos").transform.position;

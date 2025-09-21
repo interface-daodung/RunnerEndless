@@ -9,6 +9,14 @@ public class Coin : MonoBehaviour
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
     }
 
+    public void Release()
+    {
+        if (gameObject.activeSelf)
+        {
+            RoadSpawner.instance.coinPool.Release(gameObject);
+        }
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
@@ -17,7 +25,7 @@ public class Coin : MonoBehaviour
             GameManager.Instance.AddScore(pointValue);
             FindAnyObjectByType<AudioManager>().PlayCoinCollectSound();
             // Destroy the coin object
-            Destroy(gameObject);
+            RoadSpawner.instance.coinPool.Release(gameObject);
         }
     }
 }
