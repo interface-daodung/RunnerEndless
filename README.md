@@ -32,7 +32,6 @@ Người chơi có thể chạy thử game **trực tiếp trên trình duyệt*
 ---
 
 ## 📷 Hình ảnh minh họa
-*(Thêm ảnh screenshot của game tại thư mục `Screenshots/` trong repo, ví dụ:)*
 
 ```markdown
 ![Gameplay](./Screenshots/gameplay.png)
