@@ -3,7 +3,7 @@
 Một game **Endless Runner** đơn giản được làm bằng **Unity (WebGL build)**, nhân vật chính là **Nilou** (Genshin Impact fanmade).  
 Người chơi có thể chạy thử game **trực tiếp trên trình duyệt** qua GitHub Pages mà không cần tải về.  
 
-👉 [Chơi ngay tại đây](https://<your-username>.github.io/RunnerEndless/)  
+👉 [Chơi ngay tại đây](https://interface-daodung.github.io/RunnerEndless/)  
 
 ---
 
