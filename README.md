@@ -33,5 +33,4 @@ Người chơi có thể chạy thử game **trực tiếp trên trình duyệt*
 
 ## 📷 Hình ảnh minh họa
 
-```markdown
-![Gameplay](./Screenshots/gameplay.png)
+![Gameplay](Screenshots/gameplay.png)
